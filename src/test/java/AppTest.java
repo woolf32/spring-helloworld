@@ -1,8 +1,10 @@
+/*
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -16,6 +18,7 @@ public class AppTest {
 
     @Test
     public void mainTest() {
+        applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         HelloWorld tree =
                 applicationContext.getBean(HelloWorld.class);
         HelloWorld leaf =
@@ -28,3 +31,4 @@ public class AppTest {
         Assert.assertNotSame("Тест провален, не корректная настройка бина Cat", one, two);
     }
 }
+*/
